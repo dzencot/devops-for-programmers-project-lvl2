@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+  remote_user: root
+  roles:
+    - role: dependencies
+      become: yes
+
+    - role: geerlingguy.pip
+
+    - role: geerlingguy.docker
+
+    - role: deploy
+
+    - role: datadog.datadog
+      become: yes
