@@ -9,6 +9,7 @@
     - role: geerlingguy.pip
 
     - role: geerlingguy.docker
+      when: production
 
     - role: deploy
 
