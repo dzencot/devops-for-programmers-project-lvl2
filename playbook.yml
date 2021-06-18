@@ -3,13 +3,7 @@
 - hosts: all
   remote_user: root
   roles:
-    - role: dependencies
-      become: yes
-
     - role: geerlingguy.pip
-
-    # - role: geerlingguy.docker
-    #   when: is_install_docker is defined and is_install_docker == true
 
     - role: deploy
 
