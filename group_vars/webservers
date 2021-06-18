@@ -1,13 +1,3 @@
-APP_PORT: "3000"
-
-pip_install_packages:
-  - name: docker
-
-docker_package: redmine
-docker_service_state: started
-docker_service_enabled: true
-docker_restart_handler_state: restarted
-
 REDMINE_DB_POSTGRES: db-postgresql-ams3-10631-do-user-9270683-0.b.db.ondigitalocean.com
 REDMINE_DB_USERNAME: doadmin
 REDMINE_DB_PASSWORD: !vault |
@@ -28,12 +18,3 @@ datadog_api_key: !vault |
           6466333136376430630a663066303765616636666266373266356533396436633662393464316662
           39613661363831323339653934383934646465383933336338646638666134326639336630303539
           3837356234376236646662613335373965393038313938613464
-datadog_site: "datadoghq.eu"
-datadog_checks:
-  http_check:
-    init_config:
-    instances:
-      - name: Application health check status
-        url: "http://localhost:{{ APP_PORT }}"
-        timeout: 5
-        method: GET
