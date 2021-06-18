@@ -3,4 +3,5 @@
     pkg:
       # - docker.io
       - pip
+      - docker-py
     update_cache: yes
