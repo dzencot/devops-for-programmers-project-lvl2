@@ -1,6 +1,6 @@
 APP_PORT: "3000"
 
-production: true
+is_install_docker: false
 
 pip_install_packages:
   - name: docker

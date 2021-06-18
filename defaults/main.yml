@@ -4,4 +4,3 @@ docker_package: redmine
 datadog_api_key:
 datadog_site:
 datadog_checks:
-production: false
