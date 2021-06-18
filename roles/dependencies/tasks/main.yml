@@ -3,5 +3,8 @@
     pkg:
       # - docker.io
       - pip
-      - docker-py
     update_cache: yes
+
+- name: Install docker-py
+  pip:
+    name: docker-py
