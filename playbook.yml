@@ -7,6 +7,7 @@
       become: yes
 
     - role: geerlingguy.pip
+      when: is_install_docker|default(false)|bool == true
 
     - role: geerlingguy.docker
       when: is_install_docker|default(false)|bool == true
