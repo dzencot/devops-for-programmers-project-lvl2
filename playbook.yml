@@ -9,7 +9,7 @@
     - role: geerlingguy.pip
 
     - role: geerlingguy.docker
-      when: production
+      when: production == true
 
     - role: deploy
 
