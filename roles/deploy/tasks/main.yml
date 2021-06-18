@@ -2,6 +2,7 @@
 
 - name: Deploy
   community.docker.docker_container:
+    container_default_behavior: compatibility
     name: devops-example-app
     image: redmine
     ports:

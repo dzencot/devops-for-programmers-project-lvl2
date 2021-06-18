@@ -8,8 +8,8 @@
 
     - role: geerlingguy.pip
 
-    - role: geerlingguy.docker
-      when: is_install_docker|default(false)|bool == true
+    # - role: geerlingguy.docker
+    #   when: is_install_docker is defined and is_install_docker == true
 
     - role: deploy
 
