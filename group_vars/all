@@ -1,19 +1,16 @@
-APP_PORT: "3000"
-
 pip_install_packages:
   - name: docker
 
-docker_package: redmine
 docker_service_state: started
 docker_service_enabled: true
 docker_restart_handler_state: restarted
 
-datadog_site: "datadoghq.eu"
+datadog_site: datadoghq.eu
 datadog_checks:
   http_check:
     init_config:
     instances:
       - name: Application health check status
-        url: "http://localhost:{{ APP_PORT }}"
+        url: http://localhost:3000
         timeout: 5
         method: GET

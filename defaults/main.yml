@@ -1,6 +1,0 @@
-pip_install_packages:
-  - name: docker
-docker_package: redmine
-datadog_api_key:
-datadog_site:
-datadog_checks:
